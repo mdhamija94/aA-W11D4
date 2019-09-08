@@ -23,12 +23,21 @@ class LoginForm extends React.Component {
     this.props.processForm(user);
   }
 
-  render() {
+  // renderErrors() {
+  //   debugger
+  //   return (
+  //     <ul>
+  //       <li>{this.props.errors}</li>
+  //     </ul>
+  //   )
+  // }
 
+  render() {
     return (
       <div>
         <h2>Log In</h2>
         <form onSubmit={this.handleSubmit}>
+          {this.props.errors}
           <label>Username
               <input
               type="text"
@@ -43,7 +52,9 @@ class LoginForm extends React.Component {
               onChange={this.handleInput('password')}
             />
           </label>
-          <button onClick={this.handleSubmit}>Log In</button>
+          <button onClick={this.handleSubmit}>
+            <a href="">Log In</a>
+          </button>
         </form>
       </div>
     )

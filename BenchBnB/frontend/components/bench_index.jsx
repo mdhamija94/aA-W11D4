@@ -12,15 +12,19 @@ class BenchIndex extends React.Component {
 
   render() {
     return (
-      <ul>
-        {
-          this.props.benches.map(bench => {
-            return (
-              <BenchIndexItem bench={bench} key={bench.id} />
-            )
-          })
-        }
-      </ul>
+      <div className="bench-index-container">
+        <ul>
+          {
+            this.props.benches.map(bench => {
+              return (
+                <span className="bench-index-item">
+                  <BenchIndexItem bench={bench} key={bench.id} />
+                </span>
+              )
+            })
+          }
+        </ul>
+      </div>
     )
   }
 }

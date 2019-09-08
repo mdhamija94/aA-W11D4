@@ -1,20 +1,58 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "./reset.scss";
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f7f7f5;
+}
+
+a {
+  display: inline-block;
+  border: 1px solid black;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.app-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  background: white;
+  padding: 25px;
+  box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+}
+
+.header-container h1 {
+  font-size: 40px;
+}
+
+.main-content-container {
+  display: flex;
+  margin-top: 20px;
+  /* background: white; */
+}
 
 #map-container {
-  width: 500px;
+  width: 50%;
   height: 500px;
+  display: flex;
+}
+
+.bench-index-container {
+  width: 50%;
+  display: flex;
+}
+
+.bench-index-item {
+  display: flex;
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 100%;
+  border: 1px solid black;
+  justify-content: center;
+  border-radius: 5px;
 }

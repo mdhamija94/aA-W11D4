@@ -8,8 +8,8 @@ import BenchIndexContainer from './bench_index_container';
 import SearchContainer from './search_container';
 
 const App = () => (
-  <div>
-    <header>
+  <div className="app-container">
+    <header className="header-container">
       <h1>BenchBnB</h1>
       <GreetingContainer />
     </header>

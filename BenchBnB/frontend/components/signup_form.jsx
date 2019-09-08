@@ -24,13 +24,23 @@ class SignupForm extends React.Component {
     this.props.processForm(user);
   }
 
+  // renderErrors() {
+  //   return (
+  //     <ul>
+  //       <li>{this.props.errors}</li>
+  //     </ul>
+  //   )
+  // }
+
   render() {
     return (
       <div>
         <h2>Sign Up</h2>
         <form onSubmit={this.handleSubmit}>
+          {this.props.errors}
           <label>Username
               <input
+              className="username-input"
               type="text"
               value={this.state.username}
               onChange={this.handleInput('username')}
@@ -38,6 +48,7 @@ class SignupForm extends React.Component {
           </label>
           <label>Email
               <input
+              className="email-input"
               type="text"
               value={this.state.email}
               onChange={this.handleInput('email')}
@@ -45,12 +56,15 @@ class SignupForm extends React.Component {
           </label>
           <label>Password
               <input
+              className="password-input"
               type="password"
               value={this.state.password}
               onChange={this.handleInput('password')}
             />
           </label>
-          <button onClick={this.handleSubmit}>Sign Up</button>
+          <button onClick={this.handleSubmit}>
+            <a href="">Sign Up</a>
+          </button>
         </form>
       </div>
     )
